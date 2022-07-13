@@ -11,9 +11,26 @@
   
   .BMICalculator__inputWrapper {
     margin-left: 5px;
+    position: relative;
   
     input {
-      padding-right: 10px;
+      padding-right: 25px;
+    }
+
+    &.weightInput::after {
+      position: absolute;
+      right: 5px;
+      top: 0;
+      content: 'kg';
+      font-weight: bold;
+    }
+
+    &.heightInput::after {
+      position: absolute;
+      right: 5px;
+      top: 0;
+      content: 'cm';
+      font-weight: bold;
     }
   
     // hide arrow up input type number

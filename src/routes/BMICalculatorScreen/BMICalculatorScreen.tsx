@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import BMICategory from "../../utilities/BMICategory";
 
 import "./BMICalculatorScreen.scss";
 
@@ -12,8 +13,11 @@ const BMICalculatorScreen = () => {
     var weightNum: number = +weight;
 
     var bmi = weightNum / Math.pow(heightNum / 100, 2);
+    var bmiCategory = BMICategory(bmi);
 
+    // create a popup component to replace
     console.log(`Your BMI is: ${bmi.toFixed(1)}`);
+    console.log(`Your weight and height is on ${bmiCategory} category`);
   };
 
   return (
@@ -23,7 +27,7 @@ const BMICalculatorScreen = () => {
       </div>
       <div className="BMICalculator__dataWrapper">
         <span>Weight: </span>
-        <div className="BMICalculator__inputWrapper">
+        <div className="BMICalculator__inputWrapper weightInput">
           <input
             type="number"
             value={weight}
@@ -33,7 +37,7 @@ const BMICalculatorScreen = () => {
       </div>
       <div className="BMICalculator__dataWrapper">
         <span>Height: </span>
-        <div className="BMICalculator__inputWrapper">
+        <div className="BMICalculator__inputWrapper heightInput">
           <input
             type="number"
             value={height}
