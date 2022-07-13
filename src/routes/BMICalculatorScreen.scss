@@ -1,0 +1,35 @@
+.BMICalculator__wrapper {
+  text-align: center;
+
+  .BMICalculator__dataWrapper {
+    margin: 10px 0;
+  
+    > div {
+      display: inline-block;
+    }
+  }
+  
+  .BMICalculator__inputWrapper {
+    margin-left: 5px;
+  
+    input {
+      padding-right: 10px;
+    }
+  
+    // hide arrow up input type number
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+  }
+
+  button {
+    display: block;
+    margin: 10px auto;
+  }
+}

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const HomeScreen = () => {
   return (
@@ -8,12 +8,15 @@ const HomeScreen = () => {
         <li>
           <Link to="/todo">To Do App</Link>
         </li>
+        <li>
+          <Link to="/bmicalc">BMI Calculator</Link>
+        </li>
         {/* <li>
           <Link to="/weather">Weather App</Link>
         </li> */}
       </ul>
     </>
-  )
-}
+  );
+};
 
-export default HomeScreen
+export default HomeScreen;
