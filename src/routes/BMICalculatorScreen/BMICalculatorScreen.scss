@@ -1,0 +1,62 @@
+.BMICalculator__wrapper {
+  text-align: center;
+
+  .BMICalculator__dataWrapper {
+    margin: 10px 0;
+  
+    > div {
+      display: inline-block;
+    }
+  }
+  
+  .BMICalculator__inputWrapper {
+    margin-left: 5px;
+    position: relative;
+  
+    input {
+      padding-right: 25px;
+    }
+
+    &.weightInput::after {
+      position: absolute;
+      right: 5px;
+      top: 0;
+      content: 'kg';
+      font-weight: bold;
+    }
+
+    &.heightInput::after {
+      position: absolute;
+      right: 5px;
+      top: 0;
+      content: 'cm';
+      font-weight: bold;
+    }
+  
+    // hide arrow up input type number
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+  }
+
+  button {
+    display: block;
+    margin: 10px auto;
+  }
+
+  .BMICalculator__popupTitle {
+    margin-bottom: 10px;
+  }
+
+  .BMICalculator__popupDetails {
+    h2 {
+      font-weight: normal;
+    }
+  }
+}

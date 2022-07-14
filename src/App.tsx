@@ -1,8 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import TodoScreen from './routes/Todo_screen';
+import TodoScreen from "./routes/TodoScreen/Todo_screen";
 import HomeScreen from "./routes/HomeScreen";
+import BMICalculatorScreen from "./routes/BMICalculatorScreen/BMICalculatorScreen";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeScreen />} />
           <Route path="/todo" element={<TodoScreen />} />
-          {/* <Route path="/weather" element={<WeatherScreen />} /> */}
+          <Route path="/bmicalc" element={<BMICalculatorScreen />} />
         </Routes>
       </BrowserRouter>
     </div>
