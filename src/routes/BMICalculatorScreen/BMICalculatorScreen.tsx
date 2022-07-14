@@ -1,23 +1,28 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import BMICategory from "../../utilities/BMICategory";
+import Popup from "../../components/Popup/Popup";
+import ConvertBMINumberToCategory from "../../utilities/BMICategory";
 
 import "./BMICalculatorScreen.scss";
 
 const BMICalculatorScreen = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [weight, setWeight] = useState("65");
   const [height, setHeight] = useState("180");
+  const [BMI, setBMI] = useState<null | number>(null);
+  const [BMICategory, setBMICategory] = useState<null | string>(null);
 
   const handleCalculateBMI = () => {
     var heightNum: number = +height;
     var weightNum: number = +weight;
 
     var bmi = weightNum / Math.pow(heightNum / 100, 2);
-    var bmiCategory = BMICategory(bmi);
+    var bmiCategory = ConvertBMINumberToCategory(bmi);
 
     // create a popup component to replace
-    console.log(`Your BMI is: ${bmi.toFixed(1)}`);
-    console.log(`Your weight and height is on ${bmiCategory} category`);
+    setBMI(bmi);
+    setBMICategory(bmiCategory);
+    setIsPopupOpen(true);
   };
 
   return (
@@ -51,6 +56,17 @@ const BMICalculatorScreen = () => {
       </button>
 
       <Link to="/">Go back home</Link>
+      <Popup show={isPopupOpen} closeFn={() => setIsPopupOpen(false)}>
+        <div className="BMICalculator__popupTitle">
+          <h1>This is your BMI Result</h1>
+        </div>
+        <div className="BMICalculator__popupDetails">
+          <h2>Your BMI is: <strong><u>{BMI?.toFixed(1)}</u></strong></h2>
+        </div>
+        <div className="BMICalculator__popupDetails">
+          <h2>Your weight and height is on <strong><u>{BMICategory}</u></strong> category</h2>
+        </div>
+      </Popup>
     </div>
   );
 };

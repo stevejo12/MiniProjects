@@ -1,4 +1,4 @@
-const BMICategory = (num: number): string => {
+const ConvertBMINumberToCategory = (num: number): string => {
   var category = "";
 
   if (num < 16) {
@@ -22,4 +22,4 @@ const BMICategory = (num: number): string => {
   return category;
 };
 
-export default BMICategory;
+export default ConvertBMINumberToCategory;

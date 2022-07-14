@@ -49,4 +49,14 @@
     display: block;
     margin: 10px auto;
   }
+
+  .BMICalculator__popupTitle {
+    margin-bottom: 10px;
+  }
+
+  .BMICalculator__popupDetails {
+    h2 {
+      font-weight: normal;
+    }
+  }
 }

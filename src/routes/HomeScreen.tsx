@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const HomeScreen = () => {
   return (
-    <>
+    <div style={{ textAlign: "center"}}>
       <h1>Click One of These Mini Project</h1>
       <ul>
         <li>
@@ -15,7 +15,7 @@ const HomeScreen = () => {
           <Link to="/weather">Weather App</Link>
         </li> */}
       </ul>
-    </>
+    </div>
   );
 };
 

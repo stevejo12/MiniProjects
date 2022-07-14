@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import TodoScreen from "./routes/Todo_screen";
+import TodoScreen from "./routes/TodoScreen/Todo_screen";
 import HomeScreen from "./routes/HomeScreen";
 import BMICalculatorScreen from "./routes/BMICalculatorScreen/BMICalculatorScreen";
 

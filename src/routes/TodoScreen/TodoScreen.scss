@@ -1,0 +1,11 @@
+.todo__wrapper {
+  text-align: center;
+
+  .todo__taskInput > button {
+    margin-left: 10px;
+  }
+  
+  .taskList > li > button {
+    margin-left: 10px;
+  }
+}

@@ -3,8 +3,10 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
-import { RootState } from '../redux/store';
-import { addTask, deleteTask } from '../redux/tasks/tasksSlice';
+import { RootState } from '../../redux/store';
+import { addTask, deleteTask } from '../../redux/tasks/tasksSlice';
+
+import './TodoScreen.scss';
 
 function TodoScreen() {
   const dispatch = useDispatch();
@@ -40,9 +42,9 @@ function TodoScreen() {
   }
 
   return (
-    <>
+    <div className='todo__wrapper'>
       <h1>To Do List</h1>
-      <div className="taskInput">
+      <div className="todo__taskInput">
         <input 
           type="text" 
           placeholder="Enter a task" 
@@ -63,7 +65,7 @@ function TodoScreen() {
         })}
       </ol>
       <Link to="/">Go back home</Link>
-    </>
+    </div>
   )
 }
 

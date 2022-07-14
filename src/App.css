@@ -1,13 +1,4 @@
 .app {
   max-width: 1020px;
   margin: 0 auto;
-  text-align: center;
-}
-
-.taskInput > button {
-  margin-left: 10px;
-}
-
-.taskList > li > button {
-  margin-left: 10px;
 }
